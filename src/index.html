@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A tiny dependency-free blog for the VS Code Agents workshop." />
+    <title>Signal / Notes</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Signal Notes home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Signal / Notes</span>
+      </a>
+      <span class="header-label">Agent Lab</span>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">Ideas for better software teams</p>
+        <h1 id="page-title">Small notes.<br />Useful signals.</h1>
+        <p class="intro">A deliberately simple blog for practising planning, implementation, review, and verification with coding agents.</p>
+      </section>
+
+      <section class="posts-section" aria-labelledby="posts-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Latest writing</p>
+            <h2 id="posts-title">Notes from the team</h2>
+          </div>
+          <label class="search-field">
+            <span class="sr-only">Search posts</span>
+            <input id="search" type="search" placeholder="Search notes" autocomplete="off" />
+          </label>
+        </div>
+
+        <p id="result-summary" class="result-summary" aria-live="polite"></p>
+        <div id="posts" class="post-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built for a live agent workflow.</span>
+      <span>Plan · Build · Review · Verify</span>
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
