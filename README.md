@@ -24,7 +24,7 @@ demo-blog/
 ## Run it — no installation
 
 ```powershell
-node server.mjs
+npm start
 ```
 
 Open <http://localhost:4173>. Stop the server with `Ctrl+C`.
@@ -37,11 +37,15 @@ If your terminal is already inside `src`, use:
 node ../server.mjs
 ```
 
+You can also start it directly from the project root with `node server.mjs`.
+
 ## Verify it
 
 ```powershell
-node --test tests/posts.test.mjs
+npm test
 ```
+
+The direct Node.js command is `node --test tests/posts.test.mjs`.
 
 ## Workshop flow
 
