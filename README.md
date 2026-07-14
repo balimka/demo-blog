@@ -10,9 +10,11 @@ There is nothing to install: no framework, bundler, package download, or runtime
 demo-blog/
 |-- src/
 |   |-- index.html       # semantic page structure
+|   |-- post.html        # accessible article detail page
 |   |-- styles.css       # responsive visual system
 |   |-- posts.js         # data and pure domain logic
-|   `-- app.js           # DOM rendering and events
+|   |-- app.js           # post-list rendering and events
+|   `-- post-detail.js   # article lookup and detail rendering
 |-- tests/
 |   `-- posts.test.mjs   # unit tests for pure behavior
 |-- WORKSHOP_LAB.md      # exact live /create-* sequence
@@ -50,11 +52,11 @@ The direct Node.js command is `node --test tests/posts.test.mjs`.
 ## Workshop flow
 
 1. Open this folder as the VS Code workspace.
-2. Run the clean baseline and show that search works.
+2. Run the clean baseline and show that search and article navigation work.
 3. Open `WORKSHOP_LAB.md` and `WORKSHOP_TASK.md`.
 4. Create instructions, a prompt, a skill, four agents, and a hook with the `/create-*` commands.
 5. Inspect every generated file and explain its activation model and boundary.
 6. Select **Feature Orchestrator** and implement `WORKSHOP_TASK.md` through planner → implementer → reviewer.
-7. Review the diff, tests, hook feedback, and browser behavior.
+7. Review the diff, eight tests, hook feedback, and browser behavior.
 
 The starter intentionally has no `.github` customization files. The completed reference is in `workshop-assets/demo-blog-solution`.

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A note from the Signal Notes team." />
+    <title>Signal / Notes</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="Signal Notes home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Signal / Notes</span>
+      </a>
+      <span class="header-label">Team note</span>
+    </header>
+
+    <main class="article-page">
+      <a class="back-link" href="./index.html">← Back to all notes</a>
+
+      <p id="article-status" class="article-status" aria-live="polite"></p>
+
+      <article id="article-detail" class="article-detail" hidden>
+        <p id="article-category" class="eyebrow"></p>
+        <h1 id="article-title"></h1>
+        <p id="article-excerpt" class="article-intro"></p>
+        <div class="article-divider" aria-hidden="true"></div>
+        <p id="article-body" class="article-body"></p>
+      </article>
+    </main>
+
+    <footer>
+      <span>Built for a live agent workflow.</span>
+      <span>Plan · Build · Review · Verify</span>
+    </footer>
+
+    <script type="module" src="./post-detail.js"></script>
+  </body>
+</html>

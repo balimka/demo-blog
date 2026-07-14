@@ -1,6 +1,15 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { filterPosts, posts } from "../src/posts.js";
+import { filterPosts, findPostById, posts } from "../src/posts.js";
+
+test("finds a post by its stable id", () => {
+  assert.equal(findPostById(posts, "decision-logs")?.title, "Write down the decision, not the meeting");
+});
+
+test("returns null when a post id is missing or unknown", () => {
+  assert.equal(findPostById(posts, "does-not-exist"), null);
+  assert.equal(findPostById(posts, ""), null);
+});
 
 test("returns all posts for an empty query", () => {
   assert.equal(filterPosts(posts, "").length, posts.length);

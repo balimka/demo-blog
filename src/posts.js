@@ -55,6 +55,11 @@ export const posts = [
   },
 ];
 
+export function findPostById(items, id) {
+  if (!id) return null;
+  return items.find((post) => post.id === id) ?? null;
+}
+
 export function filterPosts(items, query) {
   const normalizedQuery = query.trim().toLocaleLowerCase();
   if (!normalizedQuery) return items;
